@@ -7,11 +7,11 @@
     <style>
         .field{
             border: 1px solid steelblue;
+            height: 545px;
         }
 
-        .field :hover{
-            transform: rotate(-60deg);
-            transform-origin: top right;
+        .bat{
+            transition: transform 0.2s;
         }
 
         .ball{
@@ -21,11 +21,21 @@
             border-radius: 50%;
             position: relative;
             left: 515px;
+            transition: transform 1s ease-out 0.2s;
+        }
+
+        .field:hover .bat{
+            transform: rotate(-60deg);
+            transform-origin: top right;
+        }
+
+        .field:hover .ball{
+            transform: translate(800px, -500px);
         }
     </style>
 </head>
 <body>
-    <div class="field"><img src="images/bat.png" alt="">
+    <div class="field"><img src="images/bat.png" alt="" class="bat">
         <div class="ball"></div>
     </div>
 </body>
